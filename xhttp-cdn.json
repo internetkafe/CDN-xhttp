@@ -52,6 +52,8 @@
             "xPaddingMethod": "tokenish",
             "sessionIDLength": "16-32",
             "uplinkChunkSize": "700-1200",
+            "scMaxBufferedPosts": 30,
+            "scMaxEachPostBytes": "1000000",
             "sessionPlacement": "cookie",
             "uplinkHTTPMethod": "GET",
             "xPaddingObfsMode": true,
