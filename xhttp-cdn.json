@@ -55,8 +55,6 @@
             "sessionPlacement": "cookie",
             "uplinkHTTPMethod": "GET",
             "xPaddingObfsMode": true,
-            "scMaxBufferedPosts": 30,
-            "scMaxEachPostBytes": "1000000",
             "sessionIDPlacement": "cookie",
             "uplinkDataPlacement": "body",
             "scMinPostsIntervalMs": 30
