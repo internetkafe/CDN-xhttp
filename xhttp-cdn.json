@@ -43,23 +43,23 @@
             "xmux": {
               "maxConnections": "1"
             },
-            "sessionKey": "token",
+            "sessionKey": "media_sid",
             "noSSEHeader": true,
-            "sessionIDKey": "token",
+            "sessionIDKey": "media_sid",
             "uplinkDataKey": "X-Data",
             "xPaddingBytes": "100-1000",
             "sessionIDTable": "Base62",
             "xPaddingMethod": "tokenish",
             "sessionIDLength": "16-32",
             "uplinkChunkSize": "700-1200",
-            "sessionPlacement": "header",
+            "sessionPlacement": "cookie",
             "uplinkHTTPMethod": "GET",
             "xPaddingObfsMode": true,
             "xPaddingPlacement": "header",
             "scMaxBufferedPosts": 30,
             "scMaxEachPostBytes": "1000000",
-            "sessionIDPlacement": "header",
-            "uplinkDataPlacement": "header",
+            "sessionIDPlacement": "cookie",
+            "uplinkDataPlacement": "body",
             "scMinPostsIntervalMs": 30
           }
         }
