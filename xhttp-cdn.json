@@ -58,7 +58,7 @@
             "sessionPlacement": "cookie",
             "uplinkHTTPMethod": "GET",
             "xPaddingObfsMode": true,
-            "sessionIDPlacement": "cookie",
+            "sessionIDPlacement": "query",
             "uplinkDataPlacement": "body",
             "scMinPostsIntervalMs": 30
           }
