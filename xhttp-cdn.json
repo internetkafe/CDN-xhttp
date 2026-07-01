@@ -1,0 +1,79 @@
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "dns": {
+    "servers": [
+      "1.1.1.1",
+      "8.8.8.8"
+    ]
+  },
+  "inbounds": [
+    {
+      "tag": "xhttpcdn",
+      "port": 4443,
+      "listen": "127.0.0.1",
+      "protocol": "vless",
+      "settings": {
+        "clients": [],
+        "decryption": "none"
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic"
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "minVersion": "1.2"
+        },
+        "xhttpSettings": {
+          "mode": "packet-up",
+          "path": "/a",
+          "extra": {
+            "xmux": {
+              "maxConnections": "1"
+            },
+            "sessionKey": "token",
+            "noSSEHeader": true,
+            "sessionIDKey": "token",
+            "uplinkDataKey": "X-Data",
+            "xPaddingBytes": "100-1000",
+            "sessionIDTable": "Base62",
+            "xPaddingMethod": "tokenish",
+            "sessionIDLength": "16-32",
+            "uplinkChunkSize": "700-1200",
+            "sessionPlacement": "header",
+            "uplinkHTTPMethod": "GET",
+            "xPaddingObfsMode": true,
+            "xPaddingPlacement": "header",
+            "scMaxBufferedPosts": 30,
+            "scMaxEachPostBytes": "1000000",
+            "sessionIDPlacement": "header",
+            "uplinkDataPlacement": "header",
+            "scMinPostsIntervalMs": 30
+          }
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "DIRECT",
+      "protocol": "freedom"
+    },
+    {
+      "tag": "BLOCK",
+      "protocol": "blackhole"
+    }
+  ]
+}
