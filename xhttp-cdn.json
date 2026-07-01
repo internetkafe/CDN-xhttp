@@ -48,6 +48,7 @@
             "sessionIDKey": "media_sid",
             "uplinkDataKey": "X-Playback-Token",
             "xPaddingBytes": "100-1000",
+            "seqPlacement": "query",
             "sessionIDTable": "Base62",
             "xPaddingMethod": "tokenish",
             "sessionIDLength": "16-32",
