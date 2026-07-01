@@ -38,7 +38,7 @@
         },
         "xhttpSettings": {
           "mode": "packet-up",
-          "path": "/a",
+          "path": "/",
           "extra": {
             "xmux": {
               "maxConnections": "1"
