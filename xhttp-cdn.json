@@ -59,7 +59,7 @@
             "uplinkHTTPMethod": "GET",
             "xPaddingObfsMode": true,
             "sessionIDPlacement": "query",
-            "uplinkDataPlacement": "body",
+            "uplinkDataPlacement": "query",
             "scMinPostsIntervalMs": 30
           }
         }
